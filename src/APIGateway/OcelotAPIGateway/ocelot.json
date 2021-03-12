@@ -2,39 +2,39 @@
   "Routes": [
     // Catalog
     {
-      "DownstreamPathTemplate": "/api/v1/Catalog",
+      "DownstreamPathTemplate": "/Catalog",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "catalogapi",
-          "Port": 80
+          "Port": 9090
         }
       ],
       "UpstreamPathTemplate": "/Catalog",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put" ]
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
     },
     {
-      "DownstreamPathTemplate": "/api/v1/Catalog/{id}",
+      "DownstreamPathTemplate": "/Catalog/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "catalogapi",
-          "Port": 80
+          "Port": 9090
         }
       ],
       "UpstreamPathTemplate": "/Catalog/{id}",
-      "UpstreamHttpMethod": [ "Get", "Delete" ]
+      "UpstreamHttpMethod": [ "Get", "Delete", "Update" ]
     },
     {
-      "DownstreamPathTemplate": "/api/v1/Catalog/GetProductByCategory/{category}",
+      "DownstreamPathTemplate": "/Catalog/name/{name}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "catalogapi",
-          "Port": 80
+          "Port": 9090
         }
       ],
-      "UpstreamPathTemplate": "/Catalog/GetProductByCategory/{category}",
+      "UpstreamPathTemplate": "/Catalog/name/{name}",
       "UpstreamHttpMethod": [ "Get" ]
     },
     // Basket

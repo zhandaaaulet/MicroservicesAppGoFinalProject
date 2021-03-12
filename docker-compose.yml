@@ -13,7 +13,7 @@ services:
         image: ${DOCKER_REGISTRY-}catalogapi
         build:
             context: .
-            dockerfile: src/Catalog/Catalog.API/Dockerfile
+            dockerfile: C:\Users\77071\go\src\go-microservice\Dockerfile
     basket.api:
         image: ${DOCKER_REGISTRY-}basketapi
         build:
